@@ -1,19 +1,17 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - prints the Alphabet
+ * main - print a to z followed by a newline
  *
- * Returns: Always 0 (Success)
+ * Return: 0 always
  */
 int main(void)
 {
-	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	char i = 'a';
 
-	for (i = 0; i < 26; i++)
-	{
-		putchar(alp[i]);
-	}
+	while (putchar(i++) < 'z')
+		;
+
 	putchar('\n');
 	return (0);
 }
