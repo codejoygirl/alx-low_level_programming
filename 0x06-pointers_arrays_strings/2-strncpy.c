@@ -1,29 +1,32 @@
 #include <stdio.h>
 
 /**
- * _strncpy - Copies a string with a limit of n bytes from src to dest.
- * @dest: The destination string.
- * @src: The source string to be copied to dest.
- * @n: The maximum number of bytes to copy from src.
+ * _strncpy - Copies a string up to n characters
+ * @dest: Destination string
+ * @src: Source string
+ * @n: Maximum number of characters to copy
  *
- * Return: A pointer to the resulting string dest.
+ * Return: A pointer to the destination string
  */
-
 char *_strncpy(char *dest, const char *src, int n)
 {
-	int i = 0;
+	char *dest_start = dest;
 
-	while (i < n && src[i] != '\0')
+	while (*src != '\0' && n > 0)
 {
-	dest[i] = src[i];
-	i++;
+	*dest = *src;
+	dest++;
+	src++;
+	n--;
 }
 
-	while (i < n) 
+
+	while (n > 0)
 {
-	dest[i] = '\0';
-	i++;
+	*dest = '\0';
+	dest++;
+	n--;
 }
 
-	return (dest);
+	return (dest_start);
 }
