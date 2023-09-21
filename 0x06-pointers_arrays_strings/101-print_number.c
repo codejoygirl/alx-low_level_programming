@@ -1,24 +1,34 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 
 /**
- * print_number - prints an integer.
- * @n: .input integer parameter
- *
- * Return: On success, 1. On error, -1 is returned.
+ * print_number - print any integer using putchar
+ * @n: integer to be printed
  */
 
 void print_number(int n)
 {
-	unsigned int i = n;
+	int count, y, k;
 
-	if (n < 0)
+	y = 1000000000;
+
+	if (n == 0)
+		_putchar('0');
+	else if (n > 0)
+		n *= -1;
+	else
+		_putchar('-');
+	for (count = 0; count < 10; count++, y /= 10)
 	{
-		_putchar(45);
-		i = i;
+		if (n / y == 0)
+			continue;
+		else
+		{
+			k = (-(n / y) % 10);
+			if (k < 0)
+				k *= -1;
+			_putchar(k + '0');
+		}
 	}
-	if (i / 10)
-	{
-		print_number(i / 10);
-	}
-	_putchar(i % 10 + '0');
 }
