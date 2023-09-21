@@ -6,21 +6,21 @@
  * Return: A pointer to the modified input string.
  */
 
-char *leet(char *n)
+char *leet(char *str)
 {
 	int i, j;
-	char s1[] = "aAeEoOtTlL";
-	char s2[] = "4433007711";
+	char c[] = "aAeEoOtTlL";
+	char d[] = "4433007711";
 
-	for (i = 0; n[i] != '\0'; i++
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; c[j] != '\0'; j++)
 		{
-			if (n[i] == s1[j])
+			if (str[i] == c[j])
 			{
-				n[i] = s2[j];
+				str[i] = d[j];
 			}
 		}
 	}
-	return (n);
-}	
+	return (str);
+}
