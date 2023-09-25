@@ -8,14 +8,26 @@
  * Return: A pointer to the first occurrence of @c in @s, or NULL if not found.
  */
 
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
-	int index;
+if (s == NULL)
+{
+	return (NULL);
+}
 
-	for (index = 0; s[index] >= '\0'; index++)
+while (*s != '\0')
 	{
-		if (s[index] == c)
-			return (s + index);
+	if (*s == c)
+	{
+	return (s);
 	}
-	return ('\0');
+	s++;
+	}
+
+	if (*s == c)
+	{
+	return (s);
+	}
+
+	return (NULL);
 }
