@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * _stdrdup - return a pointer to a newly allocated
+ * _strdup - return a pointer to a newly allocated
  * space in memory also duplicates the string it holds
  * to the new space
  *
