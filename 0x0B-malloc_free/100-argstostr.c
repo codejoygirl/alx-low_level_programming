@@ -3,8 +3,8 @@
 /**
  * argstostr - concatenate all program arguments
  *
- * @c: argument count
- * @v: argument vector
+ * @ac: number of strings
+ * @av: array of strings
  *
  * Return: a pointer to the array of char
  */
