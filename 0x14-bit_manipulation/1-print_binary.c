@@ -8,19 +8,19 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int te = n;
-	int i = 0;
+	int shi = 0;
 
 	if (n != 0)
 	{
 		while ((te >>= 1) > 0)
-			i++;
+			shi++;
 		while (shi >= 0)
 		{
-			if ((n >> i) & 1)
+			if ((n >> shi) & 1)
 				printf("1");
 			else
 				printf("0");
-			i--;
+			shi--;
 		}
 	}
 	else
