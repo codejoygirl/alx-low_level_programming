@@ -2,7 +2,7 @@
 
 /**
  * clear_bit - To set value of bit to 0 at given index
- * @n: 	The pointer to decimal number being changed
+ * @n: The pointer to decimal number being changed
  * @index: The index position to be changed
  * Return:Return 1 if it worked,and -1 on error
  */
